@@ -1,0 +1,165 @@
+/* =====================================================
+   Orizon Progress – Zoho Trial (brand + pastel + rouge)
+   Palette "vraie" :
+   - Gris primaire : #34495E
+   - Gris texte    : #333333
+   - Rouge         : #A5243D
+
+   Palette pastel (accents/fonds) :
+   #a4ced9 #a6e6ff #c68894 #d7c9d8 #a4bfbf #f2f2f2 #b0b0b0
+   ===================================================== */
+
+/* Polices (optionnel – si bloqué, fallback auto) */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Darker+Grotesque:wght@400;500;600&display=swap");
+
+:root{
+  /* Brand */
+  --op-primary: #34495E;   /* boutons / titres */
+  --op-text:    #333333;   /* texte principal */
+  --op-danger:  #A5243D;   /* erreurs / accents rouges */
+
+  /* Pastels */
+  --op-bg:      #f2f2f2;   /* fond page */
+  --op-card:    #ffffff;   /* carte */
+  --op-border:  #E0E0E0;   /* bordures */
+  --op-accent:  #489FB5;   /* focus/hover (palette vraie) */
+  --op-soft:    #a4ced9;   /* halo doux alternatif */
+
+  /* UI */
+  --op-muted:   #5c6670;
+  --op-radius:  14px;
+  --op-shadow:  0 14px 40px rgba(0,0,0,.10);
+}
+
+/* Base page */
+body.mp0{
+  background: var(--op-bg) !important;
+  color: var(--op-text) !important;
+  font-family: "Darker Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bandeau haut */
+.mTop{
+  color: var(--op-primary) !important;
+  font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: .2px;
+}
+
+/* Carte centrale */
+.login-box{
+  background: var(--op-card) !important;
+  border: 1px solid var(--op-border) !important;
+  border-radius: var(--op-radius) !important;
+  box-shadow: var(--op-shadow) !important;
+  padding: 28px 26px !important;
+}
+
+/* Logo */
+.serviceLogo{
+  width: 64px;
+  height: auto;
+  margin: 6px 0 14px;
+}
+
+/* Titre */
+.welcomeMessage{
+  color: var(--op-primary) !important;
+  font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin: 2px 0 14px !important;
+}
+
+/* Inputs */
+.form-input,
+.sgnemail{
+  background: #fff !important;
+  border: 1px solid var(--op-border) !important;
+  border-radius: 12px !important;
+  padding: 14px 14px !important;
+  color: var(--op-text) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  font-family: "Darker Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+}
+
+.form-input::placeholder,
+.sgnemail::placeholder{
+  color: var(--op-muted) !important;
+  opacity: .85;
+}
+
+/* Focus (accent bleu, halo pastel) */
+.form-input:focus,
+.sgnemail:focus{
+  border-color: var(--op-accent) !important;
+  box-shadow: 0 0 0 4px rgba(164, 206, 217, .55) !important; /* pastel */
+}
+
+/* Zone password “Show” */
+#show-password,
+#show-password label{
+  color: var(--op-muted) !important;
+  font-family: "Darker Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+}
+#show-password:hover,
+#show-password:hover label{
+  color: var(--op-primary) !important;
+}
+
+/* Bouton principal (style CONTACT) */
+.submit-btn{
+  background: var(--op-primary) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  width: 100% !important;
+  padding: 15px 16px !important;
+  transition: filter .15s ease, transform .05s ease;
+}
+
+.submit-btn .btnSignup{
+  color: #fff !important;
+  font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: .3px !important;
+}
+
+.submit-btn:hover{
+  filter: brightness(1.06);
+}
+
+.submit-btn:active{
+  transform: translateY(1px);
+}
+
+/* Liens (ToS / Privacy) */
+.za-tos-container a{
+  color: var(--op-primary) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.za-tos-container a:hover{
+  color: var(--op-accent) !important;
+}
+
+/* Erreurs : rouge charte */
+.error.jqval-error{
+  background: rgba(165, 36, 61, .08) !important;
+  color: var(--op-danger) !important;
+  border-left: 3px solid var(--op-danger);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+/* Petits ajustements d'espacement */
+.signupTable td{
+  padding-top: 8px !important;
+}
+.zs-ml34{
+  margin-left: 0 !important;
+}
